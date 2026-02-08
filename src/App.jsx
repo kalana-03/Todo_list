@@ -1,16 +1,18 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Todo from "./component/todo";
 import { Plus } from "lucide-react";
 
 export default function App() {
-  const [todos, setTodos] = useState([
-    { id: 1, text: "Moringing walk", completed: true },
-    { id: 2, text: "Making breakfast", completed: true },
-    { id: 3, text: "Coding practice", completed: false },
-    { id: 4, text: "Working on the new project", completed: false },
-  ]);
+  const [todos, setTodos] = useState(() => {
+    const saved = localStorage.getItem("todos-data");
+    return saved ? JSON.parse(saved) : []; 
+  });
 
   const [input, setInput] = useState("");
+
+  useEffect(() => {
+    localStorage.setItem("todos-data", JSON.stringify(todos));
+  }, [todos]);
 
   const toggleTodo = (id) => {
     setTodos(prev =>
@@ -63,7 +65,7 @@ export default function App() {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder="Add new Item...."
-              className="bg-transparent text-white placeholder-neutral-700 flex-1 outline-none"
+              className="bg-transparent text-primary-light placeholder-neutral-700 flex-1 outline-none"
               onKeyDown={(e) => e.key === "Enter" && addTodo()}
             />
 
