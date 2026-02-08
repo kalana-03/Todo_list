@@ -1,16 +1,66 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 📝 Modern React Todo App
 
-Currently, two official plugins are available:
+A sleek, dark-themed Todo application built with React and styled with Tailwind CSS. This project features a persistent data layer using browser LocalStorage and a responsive, high-contrast UI inspired by modern design trends.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Screenshot of the App](path-to-your-screenshot.png)
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* **Persistent Storage**: Uses `localStorage` to save your todos so they survive browser refreshes.
+* **Dynamic UI**: Real-time updates for adding, toggling completion, and deleting tasks.
+* **Icon Integration**: Clean iconography powered by `lucide-react`.
 
-## Expanding the ESLint configuration
+## 🚀 Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* **Framework**: [React](https://reactjs.org/) (Vite)
+* **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+* **Icons**: [Lucide React](https://lucide.dev/)
+* **State Management**: React Hooks (`useState`, `useEffect`)
+
+## 🛠️ Installation & Setup
+
+1. **Clone the repository**
+```bash
+   git clone [https://github.com/your-username/todo-app.git](https://github.com/your-username/todo-app.git)
+
+```
+
+2. **Navigate to the project folder**
+```bash
+cd todo-app
+
+```
+
+
+3. **Install dependencies**
+```bash
+npm install
+
+```
+
+
+4. **Start the development server**
+```bash
+npm run dev
+
+```
+
+
+
+## 📂 Project Structure
+
+```text
+TODO-APP/
+├── src/
+│   ├── component/
+│   │   └── todo.jsx      # Individual task component
+│   ├── assets/           # Static images and icons
+│   ├── App.jsx           # Main logic & state management
+│   ├── index.css         # Global styles & Tailwind directives
+│   └── main.jsx          # React DOM entry point
+├── public/               # Static public assets
+├── tailwind.config.js    # Custom theme configurations
+└── package.json          # Project dependencies
+```
+
