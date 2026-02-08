@@ -3,7 +3,7 @@
 
 A sleek, dark-themed Todo application built with React and styled with Tailwind CSS. This project features a persistent data layer using browser LocalStorage and a responsive, high-contrast UI inspired by modern design trends.
 
-![Screenshot of the App](path-to-your-screenshot.png)
+![Screenshot of the App](src/assets/TODO.ss.png)
 
 ## ✨ Features
 
