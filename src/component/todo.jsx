@@ -7,7 +7,7 @@ export default function Todo({todo, onToggle, onDelete}) {
                 <button onClick={() => onToggle(todo.id)}
                     className={`w-5 h-5 flex items-center justify-center rounded border mr-3
                     ${todo.completed
-                    ? "bg-white border-white"
+                    ? "bg-primary-light border-primary-light_gray"
                     : "border-neutral-600"}`
                 }>
                     {todo.completed &&(
@@ -17,8 +17,8 @@ export default function Todo({todo, onToggle, onDelete}) {
                     )} 
                 </button>
 
-                <span className = {`text-sm font-serif px-2
-                    ${todo.completed ? "text-neutral-600 line-through ":
+                <span className = {`text-sm font-semibold px-2
+                    ${todo.completed ? "text-neutral-600 line-through" :
                     "text-primary-light_gray"}`
                 }>
                     {todo.text}
